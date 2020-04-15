@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册-完美世界通行证</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/reg.css">
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="circle-box">
+		<div class="circle-1"></div>
+		<div class="circle-2"></div>
+		<div class="circle-3"></div>
+		<div class="element-1"></div>
+		<div class="element-2"></div>
+	</div>
+	<div class="reg_wrap">
+		<h1 class="top_bar">
+			<div class="logo">
+				<img src="../image/logo.png" alt="">
+			</div>
+		</h1>
+		
+		<div class="user_reg">
+			<div class="form_wrap">
+				<h2 class="t_center">注册完美通行证</h2>
+				<p class="vicetit t_center">创建完美世界账号，抢先享受全方位的游戏服务</p>
+				<div class="reg_tab cf">
+					<span class="phone_reg_tab t_center reg_method">手机注册 (推荐)</span>
+					<span class="email_reg_tab t_center">邮箱注册</span>
+				</div>
+				<form method="post" action="127.0.0.1:8080/user/reg" autocomplete="off">
+					<div class="phone_reg" >
+						<input type="text" name="phone" placeholder="手机号"><br>
+						<input type="password" name="upwd" placeholder="密码（由8-16位大小写字母、数字及字符组成）"><br>
+						<input type="password" name="repwd" placeholder="重复密码"><br>
+						<input type="text" name="user_name" placeholder="真实姓名"><br>
+						<input type="text" name="userID_num" placeholder="身份证">
+						<input type="text" name="rand" placeholder="验证码" class="rand">
+						<a href="" class="getRand t_center">获取验证码</a>
+					</div>
+
+					<div class="email_reg" style="display: none;">
+						<input type="text" name="email" placeholder="邮箱账号">
+						<input type="password" name="upwd" placeholder="密码（由8-16位大小写字母、数字及字符组成）">
+						<input type="password" name="repwd" placeholder="重复密码">
+						<input type="text" name="user_name" placeholder="真实姓名">
+						<input type="text" name="userID_num" placeholder="身份证">
+						<input type="text" name="phone" placeholder="手机号">
+						<input type="text" name="rand" placeholder="验证码" class="rand">
+						<a href="" class="getRand t_center">获取验证码</a>
+						<div class="cbox">
+							<input id="accept" class="accept" type="checkbox" checked>
+							<label for="accept">我接受</label> 
+							<a href="">《完美通行证用户协议》</a>
+							<a href="">《隐私政策》</a>
+						</div>
+					</div>
+					<input type="submit" class="submit" value="免费注册通行证">
+					<a href="" class="has_account t_center">已经有通行证了?</a>
+				</form>
+				
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="friend-link">
+			<div class="t_center">
+				<a href="http://www.wanmei.com/enterprise/company.htm" target="_blank">公司介绍</a>|
+				<a href="http://www.wanmei.com/enterprise/developmentteam.htm" target="_blank">开发团队 </a>|
+				<a href="http://hr.wanmei.com/" target="_blank">招聘信息</a>|
+				<a href="http://www.wanmei.com/enterprise/aboutme.htm" target="_blank">联系我们</a>|
+				<a href="http://www.wanmei.com/enterprise/legal.htm" target="_blank">法律声明</a>|
+				<a href="http://static.wanmei.com/passport/agreement/003.html" target="_blank">用户协议</a>|
+				<a href="http://static.wanmei.com/passport/agreement/005.html" target="_blank">隐私政策</a>|
+				<a href="http://static.wanmei.com/passport/agreement/children.html" target="_blank">儿童隐私保护指引</a>|
+				<a href="http://static.wanmei.com/passport/agreement/cookie-policy.html" target="_blank">Cookie政策</a>|
+				<a href="http://cs.wanmei.com/" target="_blank">纠纷处理</a>|
+				<a href="http://www.wanmei.com/enterprise/sitemap.htm" target="_blank">网站地图</a>
+			</div>
+		</div>
+		<div class="copyright">
+			<p class="t_center">
+				京ICP证：050016号&nbsp;&nbsp;《网络文化经营许可证》编号：文网文【2017】8929-1007号&nbsp;&nbsp;
+				<a href="http://www.wanmei.com/permit/audio.htm" target="_blank">《网络视听许可证》编号：0110587</a>
+				&nbsp;&nbsp;京公网安备11010502033859号<br>
+				<span>© 完美世界 版权所有　Perfect World. All Rights Reserved.</span>
+			</p>
+			<div class="t_center">	
+				<a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202005060700536" target="_blank">
+					<img src="../image/bot_img1.png">
+				</a>
+				<a href="https://ss.knet.cn/verifyseal.dll?sn=2011011300100005061&amp;ct=df&amp;a=1&amp;pa=0.1934185039717704" target="_blank">
+					<img src="../image/bot_img2.png">
+				</a>
+			</div>
+		</div>
+	</footer>
+	
+</body>
+<script src="../js/user_reg.js"></script>
+</html>

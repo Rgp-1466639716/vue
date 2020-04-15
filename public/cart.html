@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="cart.css">
+    
+</head>
+<body>
+    <header id="header">
+
+    </header>
+    <!-- 面包屑导航 -->
+    <div class="nav_bar">
+        <div class="wrap">
+            <a href="/">首页</a>&gt;
+            <a href="">我的购物车</a>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="cart_list" style="display:block">
+            <form id="cartForm" method="post" action="/buy/preCheckout">
+                <table cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <td class="state">
+                                <span class="all_checkbox">
+                                    <span class="checkbox">
+                                        <label class="curr"></label>
+                                    </span>
+                                    <label>全选</label>
+                                </span>
+                            </td>
+                            <td class="name">商品名称</td>
+                            <td class="num">数量</td>
+                            <td class="prices">价格</td>
+                            <td class="operation">操作</td>
+                        </tr>
+                    </thead>
+                  
+
+                </table>
+                <div class="cf total_bar">
+                    <p class="f_left">
+                        <span class="all_checkbox">
+                            <span class="checkbox">
+                                <label class="curr"></label>
+                            </span>
+                            <label>全选</label>
+                        </span>
+                        <a href="javascript:void(0)" onclick="delm()" class="batch-delete">删除选中商品</a>
+                        <a href="/">继续购物</a>
+                    </p>
+                    <div class="f_right">
+                        <div class="f_right">
+                            <input type="button" value="去结算" class="btn btn_checkout">
+                            <p class="tip tip_checkout" style="display: none;"></p>
+                        </div>
+                        <p class="f_right">共<span id="num"><font id="checkoutNum"></font></span>件商品，　合计：<span>¥<font id="checkoutPrice">819.00</font></span></p>
+                    </div>
+                </div>
+            </form>    
+        </div>
+    
+        <div class="cart_null" style="display:none;">
+            <span></span>购物车空空的哦~，赶紧<a href="/">去选购</a>吧！
+        </div>
+
+    <!-- 猜你喜欢 && 我的关注 -->
+        <div class="likes">
+            <div class="nav">
+                <ul class="cf">
+                    <li class="on">猜你喜欢</li>
+                    
+                </ul>
+            </div>
+            <div class="tempWrap" style="overflow:hidden; position:relative; width:1190px">
+                <div class="content" style="width: 1190px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                    <div class="like" style="float: left; width: 1190px;">
+                        <div class="bd">
+                            <div class="tempWrap" style="overflow:hidden; position:relative; width:1080px">
+                                <div class="list" style="width: 1080px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                    <ul class="cf" style="float: left; width: 1080px;">
+                    <li>
+                        <a href="/product/466" target="_blank"><img src="http://img.shop.wanmei.com/upload/product/2018-04-23/e1dde6d7d1e849d7b735a5436b1e5638_120.jpg" alt="" title="赛睿 Apex M500 专业游戏背光机械键盘有线104cherry樱桃红轴青轴"></a>
+                        <p class="name ellipsis is-truncated" title="赛睿 Apex M500 专业游戏背光机械键盘有线104cherry樱桃红轴青轴" style="overflow-wrap: break-word; word-break: break-all;">赛睿 Apex M500 专业游戏背光机械键盘有线104cherry... </p>
+                        <p class="price">¥819.00</p>
+                    </li>
+                    <li>
+                        <a href="/product/462" target="_blank"><img src="http://img.shop.wanmei.com/upload/product/2018-04-20/321e90c6749c4ee2806dc475df3a7002_120.jpg" alt="" title="steelseries/赛睿 Arctis 3寒冰3 RGB游戏耳机7.1"></a>
+                        <p class="name ellipsis" title="steelseries/赛睿 Arctis 3寒冰3 RGB游戏耳机7.1" style="overflow-wrap: break-word; word-break: break-all;">steelseries/赛睿 Arctis 3寒冰3 RGB游戏耳机7.1</p>
+                        <p class="price">¥629.00</p>
+                    </li> 
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="prev" href="javascript:void(0)"><span></span></a>
+                            <a class="next" href="javascript:void(0)"><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="footer"></footer>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        var vm = new Vue({
+            el : "table",
+            data:{
+                count : 1,
+                price : 819,
+            },
+            methods: {
+                reduce(){
+                    this.count > 1 ? this.count-- : this.count=1
+                    
+                },
+                add(){
+                    this.count++
+                },
+                
+            },
+        })
+    </script>
+
+</body>
+</html>
